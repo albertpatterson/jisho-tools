@@ -12,7 +12,11 @@ def getFurigana(phrase):
     lookupSoup = BeautifulSoup(lookupResponse.text, 'html.parser')
 
     phraseWrapper = lookupSoup.find(id='zen_bar')
-    phraseItems = phraseWrapper.find('ul').findAll('li')
+    phraseItemLists = phraseWrapper.findAll('ul')
+
+    phraseItems = []
+    for phraseItemList in phraseItemLists:
+        phraseItems += phraseWrapper.find('ul').findAll('li')
 
     parsedPhraseItems = []
     for item in phraseItems:

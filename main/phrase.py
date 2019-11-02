@@ -16,7 +16,7 @@ def getFurigana(phrase):
 
     phraseItems = []
     for phraseItemList in phraseItemLists:
-        phraseItems += phraseWrapper.find('ul').findAll('li')
+        phraseItems += phraseItemList.findAll('li')
 
     parsedPhraseItems = []
     for item in phraseItems:

@@ -11,19 +11,22 @@ from main import phrase
 # print(phraseWithFurigana)
 
 
+# from main import term
 from main import term
 
+# # word = 'よく'
+# # word = 'もどる'
+# # word = 'たべる'
+# # word = 'いい'
+word = 'だいじょぶ'
+# # word = ' がっく'
+# # word = 'ひと'
+# word = '食べる'
 
-word = 'よく'
-# word = 'もどる'
-# word = 'たべる'
-# word = 'いい'
-# word = 'だいじょぶ'
-# word = ' がっく'
-# word = 'ひと'
 
 definitions = term.getDefinitions(word)
-print('word: ', word)
+print('\nword: ', word)
 for definition in definitions:
+    print('\ndefinition\n')
     print(definition)
     print()

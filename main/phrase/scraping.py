@@ -1,8 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
 
-from main.phrase import utils
-from main.phrase.types import FuriganaValue, TextValueNeedsFurigana
+from . import utils
+from .types import FuriganaValue, TextValueNeedsFurigana
 
 
 def getFurigana(phrase):

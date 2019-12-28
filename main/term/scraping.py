@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
-from main.term import utils
-from main.term.types import Definition
+from . import utils
+from .types import Definition
 
 
 def getDefinitions(term):

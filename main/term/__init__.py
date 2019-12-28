@@ -1,4 +1,4 @@
-from main.term import scraping
+from . import scraping
 
 
 def getDefinitions(term):

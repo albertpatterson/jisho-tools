@@ -1,4 +1,4 @@
-from main.phrase import scraping
+from . import scraping
 
 
 def getFurigana(phrase):

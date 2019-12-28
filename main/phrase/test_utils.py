@@ -1,6 +1,6 @@
 import pytest
-from main.phrase import utils
-from main.phrase.types import FuriganaValue, TextValueNeedsFurigana
+from . import utils
+from .types import FuriganaValue, TextValueNeedsFurigana
 
 valid_kanji_furigana_combined = [
     # single hirigana, needs no furigana

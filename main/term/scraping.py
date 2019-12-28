@@ -17,7 +17,7 @@ def getDefinitions(term):
     for match in matches:
         definitions.append(_extractEntryParts(match))
 
-    return definitions
+    return sorted(definitions, key=lambda d: d.kanji != term)
 
 
 def _extractEntryParts(entry):

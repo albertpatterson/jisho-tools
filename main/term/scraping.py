@@ -13,6 +13,7 @@ def getDefinitions(term):
     matches = exactBlock.findAll(class_='concept_light')
 
     definitions = []
+    anyFailed = False
 
     for match in matches:
         try:
@@ -20,8 +21,9 @@ def getDefinitions(term):
         except Exception as e:
             print('Failed to parse a definition.')
             print(e)
+            anyFailed = True
 
-    return sorted(definitions, key=lambda d: d.kanji != term)
+    return (sorted(definitions, key=lambda d: d.kanji != term), anyFailed)
 
 
 def _extractEntryParts(entry):

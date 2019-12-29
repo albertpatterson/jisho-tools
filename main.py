@@ -22,10 +22,14 @@ from main import term
 # # word = 'ひと'
 # word = '食べる'
 # word = '金'
-word = '七'
+# word = '七'
+# word = '元気'
+# word = '土曜日'
+word = '真面目'
 
-definitions = term.getDefinitions(word)
+(definitions, anyFailed) = term.getDefinitions(word)
 print('\nword: ', word)
+print('\nany definitions failed: ', anyFailed)
 for definition in definitions:
     print('\ndefinition\n')
     print(definition)

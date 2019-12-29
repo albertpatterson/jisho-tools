@@ -10,6 +10,9 @@ def getDefinitions(term):
 
     primary = lookupSoup.find(id='primary')
     exactBlock = _matchSingleClass(primary, 'exact_block')
+    if exactBlock == None:
+        return ([], False)
+
     matches = exactBlock.findAll(class_='concept_light')
 
     definitions = []

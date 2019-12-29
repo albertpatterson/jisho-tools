@@ -25,7 +25,9 @@ from main import term
 # word = '七'
 # word = '元気'
 # word = '土曜日'
-word = '真面目'
+# word = '真面目'
+# word = '青春'
+word = 'ぴたりと'
 
 (definitions, anyFailed) = term.getDefinitions(word)
 print('\nword: ', word)

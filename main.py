@@ -21,7 +21,8 @@ from main import term
 # # word = ' がっく'
 # # word = 'ひと'
 # word = '食べる'
-word = '金'
+# word = '金'
+word = '七'
 
 definitions = term.getDefinitions(word)
 print('\nword: ', word)

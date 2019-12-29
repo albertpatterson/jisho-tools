@@ -15,7 +15,11 @@ def getDefinitions(term):
     definitions = []
 
     for match in matches:
-        definitions.append(_extractEntryParts(match))
+        try:
+            definitions.append(_extractEntryParts(match))
+        except Exception as e:
+            print('Failed to parse a definition.')
+            print(e)
 
     return sorted(definitions, key=lambda d: d.kanji != term)
 

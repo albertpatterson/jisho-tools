@@ -10,9 +10,9 @@ def combineTextAndFurigana(kanjiParts, furiganaParts):
     elif len(furiganaParts) == 0:
         raise Exception('Missing furigana')
     elif not _isValidFurigana(furiganaParts):
-        raise Exception('invalid furigana')
+        raise Exception('invalid furigana %s' % str(furiganaParts))
     elif not _isValidKanji(kanjiParts):
-        raise Exception('invalid kanji')
+        raise Exception('invalid kanji %s' % str(kanjiParts))
 
     # attempt to match lengths
     if len(kanjiParts) != len(furiganaParts):

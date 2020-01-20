@@ -12,10 +12,11 @@
 
 
 from main import term
+import json
 
 # word = 'よく'
 # # word = 'もどる'
-# # word = 'たべる'
+word = 'たべる'
 # # word = 'いい'
 # word = 'だいじょぶ'
 # # word = ' がっく'
@@ -27,12 +28,19 @@ from main import term
 # word = '土曜日'
 # word = '真面目'
 # word = '青春'
-word = 'ぴたりと'
+# word = 'ぴたりと'
 
 (definitions, anyFailed) = term.getDefinitions(word)
 print('\nword: ', word)
 print('\nany definitions failed: ', anyFailed)
 for definition in definitions:
     print('\ndefinition\n')
-    print(definition)
-    print()
+    print('kanji', definition.kanji)
+    print('furigana', definition.furigana)
+    print('definition', definition.definition)
+    print('json', str(definition))
+    jsonParsed = json.loads(str(definition))
+    print('json parsed', jsonParsed)
+    print('json parsed kanji', jsonParsed['kanji'])
+    print('json parsed furigana', jsonParsed['furigana'])
+    print('json parsed definition', jsonParsed['definition'])
